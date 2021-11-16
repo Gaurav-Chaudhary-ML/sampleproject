@@ -1,0 +1,13 @@
+name: sampleproject
+
+on: [push]
+jobs:
+  samplejob:
+    runs-on: windows-2019
+    steps: 
+      - name: create a directory
+        run: |
+          mkdir sample
+          echo ${env:PATH}
+          touch config.yaml
+        working-directory: ./temp
