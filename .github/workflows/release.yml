@@ -9,8 +9,8 @@ jobs:
         uses: actions/checkout@v2
       - name: create a directory
         run: |
+          mkdir -p ${{ github.workspace }}\sampledir
+          cd sampledir
           echo ${env:PATH}
           touch sampleconfig.yaml
-        working-directory: ./temp
-
-# mkdir -p ${{ github.workspace }}\sampledir
+        #working-directory: ./temp
