@@ -5,8 +5,9 @@ jobs:
   samplejob:
     runs-on: windows-2019
     steps: 
-      - name: create a directory
+      - name: checkout
         uses: actions/checkout@v2
+      - name: create a directory
         run: |
           mkdir GITHUB_WORKSPACE/sampledirectory
           echo ${env:PATH}
