@@ -7,7 +7,7 @@ jobs:
     steps: 
       - name: create a directory
         run: |
-          mkdir sample
+          mkdir sampledirectory
           echo ${env:PATH}
           touch config.yaml
         working-directory: ./temp
