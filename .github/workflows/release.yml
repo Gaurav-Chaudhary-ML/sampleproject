@@ -1,9 +1,6 @@
 name: sampleproject
 
-on:
-  push:
-    tags:
-      - '*'
+on: [push]
 jobs:
   release:
     runs-on: windows-2019
