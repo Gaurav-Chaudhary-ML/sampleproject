@@ -7,10 +7,17 @@ jobs:
     steps: 
       - name: checkout
         uses: actions/checkout@v2
+      - name: Set up Go
+        uses: actions/setup-go@v1
+        with:
+          go-version: 1.14.x
+      - name: Build Sfagent Binary
+        run: |
+          echo "hello"
+          ls
       - name: create a directory
         run: |
           mkdir -p ${{ github.workspace }}\sampledir
           cd sampledir
-          echo ${env:PATH}
           touch sampleconfig.yaml
         #working-directory: ./temp
