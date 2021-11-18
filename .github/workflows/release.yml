@@ -1,6 +1,9 @@
 name: sampleproject
 
-on: [push]
+on:
+  push:
+    tags:
+      - '*'
 jobs:
   release:
     runs-on: windows-2019
@@ -15,7 +18,7 @@ jobs:
         run: |
           echo "hello"
           go build -o hello.exe
-          ls
+          ls "C:\Program Files (x86)"
       - name: create a directory for MSI Setup
         run: |
           cd ..
