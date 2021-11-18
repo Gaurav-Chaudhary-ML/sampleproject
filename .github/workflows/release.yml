@@ -2,7 +2,7 @@ name: sampleproject
 
 on: [push]
 jobs:
-  samplejob:
+  setup:
     runs-on: windows-2019
     steps: 
       - name: checkout
@@ -11,13 +11,17 @@ jobs:
         uses: actions/setup-go@v1
         with:
           go-version: 1.14.x
+  build:
+    steps:
       - name: Build Sfagent Binary
         run: |
           echo "hello"
+          go build -o hello.exe
           ls
-      - name: create a directory
+      - name: create a directory for MSI Setup
         run: |
-          mkdir -p ${{ github.workspace }}\sampledir
-          cd sampledir
-          touch sampleconfig.yaml
+          cd ..
+          ls
+          mkdir -p windows-msi
+          cd windows-msi
         #working-directory: ./temp
