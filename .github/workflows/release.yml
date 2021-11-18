@@ -18,8 +18,10 @@ jobs:
           ls "C:\Program Files (x86)"
       - name: create a directory for MSI Setup
         run: |
-          cd ..
+          mkdir -p ../windows-msi
+          cp ./hello.exe ../windows-msi/
+          cp ./msi-installer/sample.wxs ../windows-msi
+          cd ../windows-msi
           ls
-          mkdir -p windows-msi
-          cd windows-msi
+          candle sample.wxs
         #working-directory: ./temp
