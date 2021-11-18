@@ -3,7 +3,7 @@ name: sampleproject
 on: 
   push:
     tags:
-      - '*'
+      - 'v*'
 jobs:
   release:
     runs-on: windows-2019
