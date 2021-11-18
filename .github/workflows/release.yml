@@ -16,9 +16,6 @@ jobs:
           echo "hello"
           go build -o hello.exe
           ls "C:\Program Files (x86)"
-      - name: Set path for candle and light
-        run: echo "C:\Program Files (x86)\WiX Toolset v3.11\bin" >> $GITHUB_PATH
-        shell: pwsh
       - name: create a directory for MSI Setup
         run: |
           mkdir -p ../windows-msi
@@ -26,5 +23,6 @@ jobs:
           cp ./msi-installer/sample.wxs ../windows-msi
           cd ../windows-msi
           ls
-          candle sample.wxs
+          & 'C:\Program Files (x86)\WiX Toolset v3.11\bin\candle.exe' .\sample.wxs
+          & 'C:\Program Files (x86)\WiX Toolset v3.11\bin\light.exe' -ext WixUtilExtension.dll .\sample.wixobj -o sample.msi
         #working-directory: ./temp
