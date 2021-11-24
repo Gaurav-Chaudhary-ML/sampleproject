@@ -1,9 +1,10 @@
 name: sampleproject
 
-on:
-  push:
-    paths:
-      - 'hello.go'
+# on:
+#   push:
+#     paths:
+#       - 'hello.go'
+on: [push]
 jobs:
   release:
     runs-on: windows-2019
@@ -14,6 +15,7 @@ jobs:
         run: |
           echo "Hello ${{ github.ref }}!"
           echo "${{ github.ref_name }}"
+          echo "${{ github.run_number }}"
       # - name: Set up Go
       #   uses: actions/setup-go@v1
       #   with:
