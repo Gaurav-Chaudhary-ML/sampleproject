@@ -32,7 +32,7 @@ jobs:
           cp ./msi-installer/sample.wxs ../windows-msi
           cd ../windows-msi
           ls
-          & 'C:\Program Files (x86)\WiX Toolset v3.11\bin\candle.exe' .\sample.wxs -d"VERSION=0.0.35"
+          & 'C:\Program Files (x86)\WiX Toolset v3.11\bin\candle.exe' .\sample.wxs -d"VERSION=${{ github.run_number }}"
           & 'C:\Program Files (x86)\WiX Toolset v3.11\bin\light.exe' -ext WixUtilExtension.dll .\sample.wixobj -o sample.msi
           ls 
       - name: Create Release
@@ -41,8 +41,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: v0.1
-          release_name: Release v0.1
+          tag_name: v0.${{ github.run_number }}
+          release_name: Release v0.${{ github.run_number }}
           draft: false
           prerelease: false
       - name: Upload Release Asset
