@@ -7,43 +7,47 @@ jobs:
     steps: 
       - name: checkout
         uses: actions/checkout@v2
-      - name: Set up Go
-        uses: actions/setup-go@v1
-        with:
-          go-version: 1.14.x
-      - name: Build Sfagent Binary
+      - name: test
         run: |
-          echo "hello"
-          go build -o hello.exe
-          ls "C:\Program Files (x86)"
-      - name: MSI Setup
-        run: |
-          mkdir -p ../windows-msi
-          cp ./hello.exe ../windows-msi/
-          cp ./msi-installer/sample.wxs ../windows-msi
-          cd ../windows-msi
-          ls
-          & 'C:\Program Files (x86)\WiX Toolset v3.11\bin\candle.exe' .\sample.wxs
-          & 'C:\Program Files (x86)\WiX Toolset v3.11\bin\light.exe' -ext WixUtilExtension.dll .\sample.wixobj -o sample.msi
-          ls 
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: v0.1
-          release_name: Release v0.1
-          draft: false
-          prerelease: false
-      - name: Upload Release Asset
-        id: upload-release-asset 
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-          asset_path: ../windows-msi/sample.msi
-          asset_name: sample.msi
-          asset_content_type: application/msi
-        #working-directory: ./temp
+          echo "Hello ${{ github.ref }}!"
+          echo "${{ github.ref_name }}"
+      # - name: Set up Go
+      #   uses: actions/setup-go@v1
+      #   with:
+      #     go-version: 1.14.x
+      # - name: Build Sfagent Binary
+      #   run: |
+      #     echo "hello"
+      #     go build -o hello.exe
+      #     ls "C:\Program Files (x86)"
+      # - name: MSI Setup
+      #   run: |
+      #     mkdir -p ../windows-msi
+      #     cp ./hello.exe ../windows-msi/
+      #     cp ./msi-installer/sample.wxs ../windows-msi
+      #     cd ../windows-msi
+      #     ls
+      #     & 'C:\Program Files (x86)\WiX Toolset v3.11\bin\candle.exe' .\sample.wxs
+      #     & 'C:\Program Files (x86)\WiX Toolset v3.11\bin\light.exe' -ext WixUtilExtension.dll .\sample.wixobj -o sample.msi
+      #     ls 
+      # - name: Create Release
+      #   id: create_release
+      #   uses: actions/create-release@v1
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   with:
+      #     tag_name: v0.1
+      #     release_name: Release v0.1
+      #     draft: false
+      #     prerelease: false
+      # - name: Upload Release Asset
+      #   id: upload-release-asset 
+      #   uses: actions/upload-release-asset@v1
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   with:
+      #     upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+      #     asset_path: ../windows-msi/sample.msi
+      #     asset_name: sample.msi
+      #     asset_content_type: application/msi
+      #   #working-directory: ./temp
