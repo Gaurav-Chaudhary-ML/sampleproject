@@ -1,6 +1,8 @@
 name: sampleproject
 
-on: [push]
+on:
+  paths:
+    - 'hello.go'
 jobs:
   release:
     runs-on: windows-2019
