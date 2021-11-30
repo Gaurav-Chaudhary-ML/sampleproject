@@ -9,7 +9,7 @@
 ![img](https://github.com/gaurav-dot-chaudhary/sampleproject/blob/master/IIS/1.png)
 
 
-2. Select “Add roles and features” on Server Manager Dashboard.
+2. Select "Add roles and features" on Server Manager Dashboard.
 
 ![img](https://github.com/gaurav-dot-chaudhary/sampleproject/blob/master/IIS/Screenshot%20(2).png)
 
@@ -29,7 +29,7 @@
 ![img](https://github.com/gaurav-dot-chaudhary/sampleproject/blob/master/IIS/Screenshot%20(5).png)
 
  
-6. Select “Web Server(IIS)” in Server Roles.
+6. Select "Web Server(IIS)" in Server Roles.
  
 ![img](https://github.com/gaurav-dot-chaudhary/sampleproject/blob/master/IIS/Screenshot%20(6).png)
 
@@ -48,7 +48,7 @@
 ![img](https://github.com/gaurav-dot-chaudhary/sampleproject/blob/master/IIS/Screenshot%20(9).png)
 
 
-10. In Role Services, select all features under “Common HTTP features”, “Health and Diagnostics” and “Performance”. 
+10. In Role Services, select all features under "Common HTTP features", "Health and Diagnostics" and "Performance". 
 
  ![img](https://github.com/gaurav-dot-chaudhary/sampleproject/blob/master/IIS/Screenshot%20(10).png)
 
@@ -79,7 +79,7 @@
 ![img](https://github.com/gaurav-dot-chaudhary/sampleproject/blob/master/IIS/Screenshot%20(15).png)
 
  
-2. Right click on your server, and select “Start Performance Counters”.
+2. Right click on your server, and select "Start Performance Counters".
  
 ![img](https://github.com/gaurav-dot-chaudhary/sampleproject/blob/master/IIS/Screenshot%20(16).png)
 
@@ -95,12 +95,12 @@
 ![img](https://github.com/gaurav-dot-chaudhary/sampleproject/blob/master/IIS/Screenshot%20(18).png)
 
 
-3. Double click on "Logging Option".
+3. Double click on "Logging" Option.
 
 ![img](https://github.com/gaurav-dot-chaudhary/sampleproject/blob/master/IIS/Screenshot%20(19).png)
 
  
-4. Click on “Select Fields…”.
+4. Click on "Select Fields…".
  
 ![img](https://github.com/gaurav-dot-chaudhary/sampleproject/blob/master/IIS/Screenshot%20(20).png)
 
@@ -110,7 +110,7 @@
 ![img](https://github.com/gaurav-dot-chaudhary/sampleproject/blob/master/IIS/Screenshot%20(21).png)
 
  
-6. After selecting all fields, click on “Ok”.
+6. After selecting all fields, click on "Ok".
 
 ![img](https://github.com/gaurav-dot-chaudhary/sampleproject/blob/master/IIS/Screenshot%20(22).png)
 
