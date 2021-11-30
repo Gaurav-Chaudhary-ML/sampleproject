@@ -68,7 +68,7 @@
 ![img](https://github.com/gaurav-dot-chaudhary/sampleproject/blob/master/IIS/Screenshot%20(13).png)
 
 
-14. Navigate to Server Manager Dashboard, IIS Web Server is installed and can be seen in the left side bar.
+14. Navigate to Server Manager Dashboard, IIS Web Server is installed and can be seen in the left pane.
  
 ![img](https://github.com/gaurav-dot-chaudhary/sampleproject/blob/master/IIS/Screenshot%20(14).png)
 
@@ -89,7 +89,7 @@
 ![img](https://github.com/gaurav-dot-chaudhary/sampleproject/blob/master/IIS/Screenshot%20(17).png)
 
  
-2. Navigate to your web site in left hand side menu, and select it.
+2. Navigate to your web site in left pane, and select it.
 
 ![img](https://github.com/gaurav-dot-chaudhary/sampleproject/blob/master/IIS/Screenshot%20(18).png)
 
