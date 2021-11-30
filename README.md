@@ -72,13 +72,14 @@
  
 ![img](https://github.com/gaurav-dot-chaudhary/sampleproject/blob/master/IIS/Screenshot%20(14).png)
 
+### Starting Performance Counters
 
-15. Click on IIS. Your server will be listed under "SERVERS".
+1. Click on IIS. Your server will be listed under "SERVERS".
 
 ![img](https://github.com/gaurav-dot-chaudhary/sampleproject/blob/master/IIS/Screenshot%20(15).png)
 
  
-16. Right click on your server, and select “Start Performance Counters”.
+2. Right click on your server, and select “Start Performance Counters”.
  
 ![img](https://github.com/gaurav-dot-chaudhary/sampleproject/blob/master/IIS/Screenshot%20(16).png)
 
